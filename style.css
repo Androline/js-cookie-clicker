@@ -61,7 +61,7 @@ button {
     border-radius: 10px;
     border: solid 4px #ff8db8;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .cookie {
@@ -83,9 +83,16 @@ button {
 }
 
 #ribbon {
-    height: 90px;
+    height: 100px;
     width: auto;
     padding-top: 20px;
+}
+
+#ribbonReverse {
+    height: 100px;
+    width: auto;
+    padding-bottom: 20px;
+    transform: rotate(180deg);
 }
 #score , #clicks , #multiplyPrice , #multiplyItem , #autoClickPrice, #autoClickItem , #cookiesPerClick, #cookiesPerSecond {
     color: #fac6de;
