@@ -1,7 +1,7 @@
 *{
     font-family: 'Berkshire Swash', cursive;
     font-size: 30px;
-    color: #f6e5c5;
+    color: #f5e1bc;
     cursor: url(https://cur.cursors-4u.net/food/foo-6/foo523.cur), auto;
 }
 
@@ -61,16 +61,32 @@ button {
     border-radius: 10px;
     border: solid 4px #ff8db8;
     text-align: center;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 40px;
 }
 
 .cookie {
-    padding-top: 50px;
+    height: 100px;
+    width: auto;
+    box-sizing: border-box;
+    padding-top: 20px;
+    transition: transform .2s;
+}
+
+.cookie:active{
+    transform: scale(0.8);
 }
 
 .store {
     padding-top: 25px;
     padding-left: 10px;
     text-align: center;
+}
+
+#ribbon {
+    height: 90px;
+    width: auto;
+    padding-top: 20px;
+}
+#score , #clicks , #multiplyPrice , #multiplyItem , #autoClickPrice, #autoClickItem , #cookiesPerClick, #cookiesPerSecond {
+    color: #fac6de;
 }

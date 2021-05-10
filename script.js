@@ -1,21 +1,70 @@
 let count = 0;
-let counter = document.getElementById("counter");
+let counter = document.getElementById("clicks");
 let score = 0;
 let scoreLabel = document.getElementById("score");
-let button = document.getElementById("run");
+let multiplier = 2;
+let clicker = 1;
+let autoClicker = 0;
+let multiplierCost = 10;
+let autoMultiplier = 2;
+let autoClickerCost = 10;
+let autoClickPrice = document.getElementById("autoClickPrice");
+let autoClickItem = document.getElementById("autoClickItem");
+let multiplyPrice = document.getElementById("multiplyPrice");
+let multiplyItem = document.getElementById("multiplyItem");
+let cookiesPerClick = document.getElementById("cookiesPerClick");
+let cookiesPerSecond = document.getElementById("cookiesPerSecond");
 
-document.getElementById("run").addEventListener("click", function () {
+multiplyItem.textContent = multiplier;
+cookiesPerClick.textContent = clicker;
+multiplyPrice.textContent = multiplierCost;
+autoClickPrice.textContent = autoClickerCost;
+autoClickItem.textContent = autoMultiplier;
+
+window.setInterval(function () {
+    score += autoClicker; // score = score + autoClicker
+    scoreLabel.textContent = score;
+
+}, 1000);
+
+document.getElementById("cookie").addEventListener("click", function () {
 
     count += 1; // count = count +1
-    counter.innerHTML = count;
+    counter.textContent = count;
 
-    score += 1; // score = score +1
-    scoreLabel.innerHTML = "Score: " + score;
+    score += clicker; // score = score +1
+    scoreLabel.textContent = score;
 });
 
 document.getElementById("multiplier").addEventListener("click", function () {
+    if (score >= multiplierCost) {
+        score = score - multiplierCost;
 
-score *= 2;
-scoreLabel.innterHTML = "Score: " + score;
+        multiplierCost = multiplierCost * multiplier;
+
+        clicker = clicker * multiplier;
+
+        scoreLabel.textContent = score;
+        cookiesPerClick.textContent = clicker;
+        multiplyPrice.textContent = multiplierCost;
+
+    }
+});
+
+document.getElementById("autoClick").addEventListener("click", function () {
+    if(score >= autoClickerCost) {
+        score = score - autoClickerCost;
+        autoClicker += 1; // autoClicker = autoClicker + 1
+
+        autoClickerCost = autoClickerCost * autoMultiplier;
+
+        scoreLabel.textContent = score;
+        cookiesPerSecond.textContent = autoClicker;
+        autoClickPrice.textContent = autoClickerCost;
+
+    }
 
 });
+
+
+
