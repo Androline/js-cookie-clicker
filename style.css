@@ -72,6 +72,10 @@ button {
     transition: transform .2s;
 }
 
+.cookie:hover {
+    transform: scale(1.03);
+}
+
 .cookie:active{
     transform: scale(0.8);
 }
