@@ -1,4 +1,4 @@
-*{
+* {
     font-family: 'Berkshire Swash', cursive;
     font-size: 30px;
     color: #f5e1bc;
@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    background-image: url("https://images.wallpaperscraft.com/image/clouds_beautiful_sky_179079_2048x1152.jpg");
+   background-image: url("https://images.wallpaperscraft.com/image/clouds_beautiful_sky_179079_2048x1152.jpg");
     background-position: center;
     overflow: hidden;
 }
@@ -23,7 +23,6 @@ body {
     height: 100px;
     padding-top: 20px;
     padding-bottom: 100px;
-
 }
 
 .leftSide {
@@ -32,7 +31,6 @@ body {
     box-sizing: border-box;
     height: 100%;
     width: 50%;
-    display: inline-block;
     padding-top: 25px;
     padding-bottom: 350px;
     padding-left: 10px;
@@ -43,20 +41,18 @@ body {
 
 .rightSide {
     background-image: linear-gradient(#974621, #bb6943);
-    float: left;
+    float: right;
     box-sizing: border-box;
     height: 100%;
     width: 50%;
-    display: inline-block;
     padding-bottom: 375px;
     padding-left: 20px;
     border: solid 10px #974621;
     border-radius: 5px;
 }
 
-
 button {
-    display: inline-block;
+
     background-color: #e578a1;
     border-radius: 10px;
     border: solid 4px #ff8db8;
@@ -76,7 +72,7 @@ button {
     transform: scale(1.03);
 }
 
-.cookie:active{
+.cookie:active {
     transform: scale(0.8);
 }
 
@@ -98,6 +94,7 @@ button {
     padding-bottom: 20px;
     transform: rotate(180deg);
 }
-#score , #clicks , #multiplyPrice , #multiplyItem , #autoClickPrice, #autoClickItem , #cookiesPerClick, #cookiesPerSecond {
+
+#score, #clicks, #multiplyPrice, #multiplyItem, #autoClickPrice, #autoClickItem, #cookiesPerClick, #cookiesPerSecond {
     color: #fac6de;
 }
