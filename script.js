@@ -15,11 +15,12 @@ let multiplyItem = document.getElementById("multiplyItem");
 let cookiesPerClick = document.getElementById("cookiesPerClick");
 let cookiesPerSecond = document.getElementById("cookiesPerSecond");
 
-multiplyItem.textContent = multiplier;
+
 cookiesPerClick.textContent = clicker;
 multiplyPrice.textContent = multiplierCost;
+multiplyItem.textContent = clicker * multiplier;
 autoClickPrice.textContent = autoClickerCost;
-autoClickItem.textContent = autoMultiplier;
+autoClickItem.textContent = autoClicker + 1;
 
 window.setInterval(function () {
     score += autoClicker; // score = score + autoClicker
@@ -48,6 +49,8 @@ document.getElementById("multiplier").addEventListener("click", function () {
         cookiesPerClick.textContent = clicker;
         multiplyPrice.textContent = multiplierCost;
 
+        multiplyItem.textContent = clicker * multiplier;
+
     }
 });
 
@@ -61,6 +64,8 @@ document.getElementById("autoClick").addEventListener("click", function () {
         scoreLabel.textContent = score;
         cookiesPerSecond.textContent = autoClicker;
         autoClickPrice.textContent = autoClickerCost;
+
+        autoClickItem.textContent = autoClicker + 1;
 
     }
 
