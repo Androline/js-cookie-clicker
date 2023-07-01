@@ -13,7 +13,7 @@ html {
 }
 
 body {
-   background-image: url("https://mcdn.wallpapersafari.com/medium/32/8/8kUmwC.jpg");
+   background-image: url('https://mcdn.wallpapersafari.com/medium/32/8/8kUmwC.jpg');
     background-position: center;
     overflow: hidden;
 }
